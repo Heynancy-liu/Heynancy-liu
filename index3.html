@@ -19,6 +19,7 @@
         }
         h1, h2 {
             margin-bottom: 20px; /* 标题间距 */
+            font-weight: 600; /* 标题字体加粗，但不是bold */
         }
         h1 {
             font-size: 2.5em; /* 主标题字体大小 */
@@ -28,12 +29,14 @@
         }
         p {
             margin-bottom: 20px; /* 段落间距 */
+            font-weight: 400; /* 正文正常粗细 */
         }
         .underline-dashed {
             text-decoration: underline dashed;
         }
         .large-text {
             font-size: 1.5em; /* 定义大字体大小 */
+            font-weight: 500; /* 大字体稍微加粗 */
         }
         .no-shadow {
             text-shadow: none; /* 移除阴影效果 */
@@ -42,26 +45,24 @@
             max-width: 100%;
             height: auto;
         }
-        @media (max-width: 768px) { /* 平板和手机屏幕 */
-            h1 {
-                font-size: 2em;
+        b, strong {
+            font-weight: 700; /* 加粗样式 */
+        }
+        /* 手机和平板屏幕 */
+        @media (max-width: 768px) {
+            body {
+                text-align: center; /* 文字居中 */
             }
-            h2 {
-                font-size: 1.5em;
-            }
-            .large-text {
-                font-size: 1.2em;
+            h1, h2, p {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%; /* 限制最大宽度 */
             }
         }
-        @media (max-width: 480px) { /* 小屏幕手机 */
-            h1 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
-            .large-text {
-                font-size: 1em;
+        /* 桌面屏幕 */
+        @media (min-width: 769px) {
+            body {
+                text-align: left; /* 文字靠左 */
             }
         }
     </style>
