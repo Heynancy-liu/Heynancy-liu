@@ -1,1 +1,73 @@
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=900764780&bvid=BV19N4y1N743&cid=1333631075&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文生视频</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>成语：画龙点睛</h1>
+        <video controls poster="poster-image.jpg">
+            <source src="hualongdianjing.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('video');
+            video.addEventListener('play', function() {
+                console.log('视频开始播放');
+                // 视频播放时的逻辑
+            });
+            video.addEventListener('pause', function() {
+                console.log('视频暂停');
+                // 视频暂停时的逻辑
+            });
+            video.addEventListener('ended', function() {
+                console.log('视频播放结束');
+                // 视频结束时的逻辑
+                // 例如：显示一些信息或者自动重播
+            });
+        });
+    </script>
+</body>
+</html>
