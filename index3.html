@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口元标签 -->
     <title>小朋友写的诗两首</title>
     <style>
         body {
@@ -11,17 +12,63 @@
             background-repeat: no-repeat; /* 不重复背景图片 */
             color: white; /* 文字颜色设置为白色，以便在图片上清晰显示 */
             font-family: Arial, sans-serif; /* 设置字体 */
-            padding: 20px; /* 为内容添加一些内边距 */
+            padding: 10px; /* 为内容添加一些内边距 */
             text-shadow: 2px 2px 4px #000; /* 为文字添加阴影 */
+            margin: 0; /* 移除默认边距 */
+            min-height: 100vh; /* 最小高度为视口高度 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2 {
+            width: 100%; /* 标题宽度 */
+            text-align: center; /* 文本居中 */
+        }
+        h1 {
+            font-size: 2.5em; /* 主标题字体大小 */
+        }
+        h2 {
+            font-size: 2em; /* 副标题字体大小 */
+        }
+        p {
+            text-align: center; /* 文本居中 */
+            max-width: 800px; /* 最大宽度 */
+            margin: 10px auto; /* 上下边距 */
         }
         .underline-dashed {
             text-decoration: underline dashed;
         }
-         .large-text {
+        .large-text {
             font-size: 1.5em; /* 定义大字体大小 */
-         }
-         .no-shadow {
+        }
+        .no-shadow {
             text-shadow: none; /* 移除阴影效果 */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) { /* 平板和手机屏幕 */
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .large-text {
+                font-size: 1.2em;
+            }
+        }
+        @media (max-width: 480px) { /* 小屏幕手机 */
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            .large-text {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
