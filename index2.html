@@ -21,6 +21,7 @@
             justify-content: center;
             height: 100%;
             text-align: center;
+            padding: 20px; /* 页面边距 */
         }
 
         h1 {
@@ -29,16 +30,28 @@
         }
 
         video {
-            max-width: 100%;
+            max-width: 80%; /* 视频框大小调整为80% */
             height: auto;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-section {
+            max-width: 80%; /* 文字板块宽度 */
+            margin: 20px auto; /* 文字板块居中 */
+            padding: 20px;
+            background-color: #fff; /* 文字板块背景色 */
+            border-radius: 8px; /* 文字板块圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 文字板块阴影 */
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
+            }
+            video, .text-section {
+                max-width: 95%; /* 小屏幕时视频和文字板块宽度 */
             }
         }
     </style>
@@ -50,6 +63,11 @@
             <source src="视频作品 举案齐眉.mp4" type="video/mp4">
             您的浏览器不支持视频播放。
         </video>
+        <div class="text-section">
+            <h2>视频制作过程</h2>
+            <p>举案齐眉是一个汉语成语，意思是形容夫妻相敬如宾，和睦相处。</p>
+            <p>这个成语出自《后汉书·梁鸿传》，讲述了梁鸿和孟光夫妇的故事。梁鸿每天劳动回来，孟光都会把食物举到眉毛的高度，表示对丈夫的尊敬。</p>
+        </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
